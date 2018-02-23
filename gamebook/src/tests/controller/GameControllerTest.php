@@ -17,7 +17,7 @@ class GameControllerTest extends TestCase
     {
         $client = new GoutteClient();
         $response = $client->request('GET',
-        "http://localhost:8000/add-rating.php?game=1");
+        "http://0.0.0.0:8000/add-rating.php?game=1");
 
         $this->assertCount(1, $response->filter('form'));
         $this->assertEquals('', 
@@ -74,7 +74,7 @@ class GameControllerTest extends TestCase
         $client = new GuzzleClient();
         $response = $client->request(
             'GET',
-            'http://localhost:8000/api-games.php',
+            'http://0.0.0.0:8000/api-games.php',
             array(
                 'json' => array(
                     'user' => 1

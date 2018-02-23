@@ -10,7 +10,8 @@ $games = $repo->findUserById(1);
 <ul>
 <?php foreach ($games as $game): ?>
     <li>
-        <?php echo $game->getTitle() ?><br>
+        <span class="title"><?php echo $game->getTitle() ?></span><br>
+        <a href="add-rating.php?game=<?php echo $game->getId() ?>">Rate</a>
         <?php echo $game->getAverageScore() ?><br>
         <img src="<?php echo $game->getImagePath() ?>">
     </li>

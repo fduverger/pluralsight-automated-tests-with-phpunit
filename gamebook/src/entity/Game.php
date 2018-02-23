@@ -4,6 +4,12 @@ class Game {
     protected $title;
     protected $imagePath;
     protected $ratings;
+    protected $id;
+
+    public function __construct($id = null)
+    {
+        $this->id = $id;
+    }
 
     public function isRecommended($user) 
     {
@@ -109,5 +115,13 @@ class Game {
         $this->ratings = $ratings;
 
         return $this;
+    }
+
+    /**
+     * Get the value of id
+     */ 
+    public function getId()
+    {
+        return $this->id;
     }
 }

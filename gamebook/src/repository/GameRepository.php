@@ -38,7 +38,7 @@ class GameRepository {
     public function findUserById($id){
         $games = [];
         for ($i=1; $i <= 6; $i++) { 
-            $game = new Game();
+            $game = new Game($i);
             $game->setTitle("Game ". $i);
             $game->setImagePath("/images/game.jpg");
             $rating = new Rating();
