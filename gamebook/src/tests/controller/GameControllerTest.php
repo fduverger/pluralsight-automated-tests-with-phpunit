@@ -1,11 +1,18 @@
 <?php
-require __DIR__. "/../../../vendor/autoload.php";
 use Goutte\Client as GoutteClient;
 use GuzzleHttp\Client as GuzzleClient;
 use PHPUnit\Framework\TestCase;
 
 class GameControllerTest extends TestCase 
 {
+
+    public function setUp()
+    {
+        // echo exec('whoami');
+        exec("mysql -u'root' --password='123...abc' < ".__DIR__."/../fixture.sql");
+    }
+    
+
     public function testIndexHasUl()
     {
         $client = new GoutteClient();

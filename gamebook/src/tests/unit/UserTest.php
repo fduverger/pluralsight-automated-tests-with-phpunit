@@ -1,6 +1,4 @@
 <?php
-require __DIR__. "/../../entity/User.php";
-
 use PHPUnit\Framework\TestCase;
 
 

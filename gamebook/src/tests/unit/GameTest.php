@@ -1,7 +1,5 @@
 <?php
 use PHPUnit\Framework\TestCase;
-require __DIR__. "/../../entity/Game.php";
-require __DIR__. "/../../entity/User.php";
 
 class GameTest extends TestCase {
     

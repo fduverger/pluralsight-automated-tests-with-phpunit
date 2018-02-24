@@ -1,5 +1,4 @@
 <?php
-require __DIR__. "/../../../vendor/autoload.php";
 
 class RatingSubmissionTest extends PHPUnit_Extensions_Selenium2TestCase
 {
